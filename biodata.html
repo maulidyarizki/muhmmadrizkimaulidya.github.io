@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Biodatadiri</title>
+  </head>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary mx-auto">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Maulidya Website</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <br><br>
+  <div class="container text-center">
+    <img src="Maul.png"class="rounded-circle border border-primary" width="150px" alt="">
+    <h3>Welcome to My Website</h3>
+    <h2>MUHAMMAD RIZKI MAULIDYA</h2>
+  </div>
+  <section id="about">
+  <br><br>
+  <div class="bg-info">
+  <div class="container text-center">
+    <br>
+    <h1>About Me</h1>
+  </div>
+  <br><br>
+  <div class="container text-center">
+    <div class="row justify-content-center">
+      <div class="col-4">
+        <p>Perkenalkan nama saya Muhammad Rizki Maulidya
+           banyak teman saya memanggil saya dengan panggilan Maul,
+           Saya Mahasiswa Universitas Pamulang, Prodi TEKNIK INFORMATIKA.
+           Asal saya dari BOGOR dan lahir pada 26 Juni 2000. </p>
+      </div>
+      <div class="col-4">
+        <p>Dengan adanya web ini, Untuk Memenuhi salah satu Tugas saya,
+           di Mata Kuliah Pemrograman Web 1.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<section id="contact">
+  <div class="container">
+    <div class="row text-center mb-3">
+      <div class="col">
+        <h2>Contact Me</h2>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form name="wpu-contact-form">
+          <div class="mb-3">
+            <label for="name" class="form-label">Nama Lengkap</label>
+            <input type="text" class="form-control" id="name" 
+            aria-describedby="name" name="nama" />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" 
+              aria-describedby="email" name="email" />
+            </div>
+            <div class="mb-3">
+              <label for="pesan" class="form-label">Pesan</label>
+              <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
+            </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <footer class="bg-primary text-white text-center p">
+    <p>Create with love by <a href="https://www.instagram.com/maulidya.rizki/" class="text-white fw-bold">Muhammad Rizki Maulidya</a></p>
+  </footer>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+ <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbw_fxloLovOC1pSK6HW3uU9VAXPk9vz1jpSM8vtCfe-e9-jHbXk35dFsRdIPq1adEfM/exec'
+  const form = document.forms['wpu-contact-form'] 
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+</body>
+</html>
